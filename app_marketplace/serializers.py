@@ -76,3 +76,29 @@ class OrderGetSerializer(ModelSerializer):
         fields = (
             'id', 'product_name', 'quantity', 'total_price'
         )
+
+
+class CartSerializer(ModelSerializer):
+    class Meta:
+        model = 'Cart'
+        fields = "__all__"
+
+
+class PaymentSerializer(ModelSerializer):
+    class Meta:
+        model = 'Payment'
+        fields = "__all__"
+
+
+class ProductReviewSerializer(ModelSerializer):
+    class Meta:
+        model = "ProductReview"
+        fields = "__all__"
+
+
+class ProductReviewGetSerializer(ModelSerializer):
+    class Meta:
+        model = "ProductReview"
+        fields = (
+            "id", "product", "rating"
+        )
