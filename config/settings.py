@@ -190,8 +190,8 @@ REST_FRAMEWORK = {
 AUTH_USER_MODEL = 'users.CustomUser'
 
 CKEDITOR_UPLOAD_PATH = "uploads/"
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # Email settings via Gmail
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

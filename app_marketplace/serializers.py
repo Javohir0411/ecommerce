@@ -11,7 +11,7 @@ from app_marketplace.models import (Product,
 class CategorySerializer(ModelSerializer):
     class Meta:
         model = Category
-        field = '__all__'
+        fields = '__all__'
 
 
 class CategoryGetSerializer(ModelSerializer):
@@ -66,39 +66,39 @@ class ProductGetSerializer(ModelSerializer):
 
 class OrderSerializer(ModelSerializer):
     class Meta:
-        model = "Order"
+        model = Order
         fields = "__all__"
 
 
 class OrderGetSerializer(ModelSerializer):
     class Meta:
-        model = "Order"
+        model = Order
         fields = (
-            'id', 'product_name', 'quantity', 'total_price'
+            'id', 'product', 'quantity', 'total_price'
         )
 
 
 class CartSerializer(ModelSerializer):
     class Meta:
-        model = 'Cart'
+        model = Cart
         fields = "__all__"
 
 
 class PaymentSerializer(ModelSerializer):
     class Meta:
-        model = 'Payment'
+        model = Payment
         fields = "__all__"
 
 
 class ProductReviewSerializer(ModelSerializer):
     class Meta:
-        model = "ProductReview"
+        model = ProductReview
         fields = "__all__"
 
 
 class ProductReviewGetSerializer(ModelSerializer):
     class Meta:
-        model = "ProductReview"
+        model = ProductReview
         fields = (
             "id", "product", "rating"
         )

@@ -58,7 +58,8 @@ def login_view(request):
 class CategoryViewSet(ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
+
+    # permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
 
     def get_serializer_class(self):
         if self.request.method == "GET":
@@ -70,7 +71,8 @@ class CategoryViewSet(ModelViewSet):
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
+
+    # permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
 
     def get_serializer_class(self):
         if self.request.method == "GET":
@@ -82,8 +84,8 @@ class ProductViewSet(ModelViewSet):
 class OrderViewSet(ModelViewSet):
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
-    permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
 
+    # permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
     def get_serializer_class(self):
         if self.request.method == "GET":
             return OrderGetSerializer
@@ -94,19 +96,24 @@ class OrderViewSet(ModelViewSet):
 class CartViewSet(ModelViewSet):
     queryset = Cart.objects.all()
     serializer_class = CartSerializer
-    permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
+
+
+#     permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
 
 
 class PaymentViewSet(ModelViewSet):
     queryset = Payment.objects.all()
     serializer_class = ProductSerializer
-    permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
+
+
+#     permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
 
 
 class ProductReviewViewSet(ModelViewSet):
     queryset = ProductReview.objects.all()
     serializer_class = ProductReviewSerializer
-    permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
+
+    #     permission_classes = [IsOwnerAuthenticated, IsAuthenticated]
 
     def get_serializer_class(self):
         if self.request.method == "GET":
